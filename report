@@ -1,0 +1,46 @@
+h2. User Feedback
+
+I had a QGIS project opens whihc had a number of layers in it, most of which were unavailable while I had the project open.
+
+I opened up a kmz file as an additional layer and this worked fine, aside from the fact that it had a spurious line in it extending from the location where my physical project is located, to somewhere near the Galapagos Islands I think.  I had zoomed into the far end of the line to see where it was and was then zooing back toward my physical project lcoation when the crash ioccurred.  I had my project KMZ file open and an Open Street map layer open and the system reported a 'bad allocation, and kind of froze after that.
+
+When I tried to close QGIS I then got this error report dialogue 
+
+h2. Report Details
+
+*Crash ID*: 62f1fcd2045780cb9f127836e6b579b8665f3e63
+
+
+*Stack Trace*
+<pre>
+proj_lpz_dist :
+proj_lpz_dist :
+QgsCoordinateTransform::transformPolygon :
+QgsCoordinateTransform::transformPolygon :
+QgsCoordinateTransform::QgsCoordinateTransform :
+QHashData::free_helper :
+QgsCoordinateTransform::addToCache :
+QgsCoordinateTransform::invalidateCache :
+QgsApplication::exitQgis :
+QgisApp::~QgisApp :
+CPLStringList::operator[] :
+main :
+BaseThreadInitThunk :
+RtlUserThreadStart :
+</pre>
+
+
+*QGIS Info*
+QGIS Version: 3.6.0-Noosa
+QGIS code revision: commit:58734527ab
+Compiled against Qt: 5.11.2
+Running against Qt: 5.11.2
+Compiled against GDAL: 2.4.0
+Running against GDAL: 2.4.0
+
+
+
+*System Info*
+CPU Type: x86_64
+Kernel Type: winnt
+Kernel Version: 10.0.17763
